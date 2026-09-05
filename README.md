@@ -1,9 +1,9 @@
 # Sentinela
-# ☕ CyberSOC — Responsabilidades da Equipe Java
+# ☕ Sentinela — Responsabilidades da Equipe Java
 
 ## 1. Visão geral
 
-O Java será responsável pela **camada de negócio do CyberSOC**.
+O Java será responsável pela **camada de negócio do Sentinela**.
 
 Enquanto o Rust ficará responsável por receber e processar tecnicamente os eventos de segurança, o Java será responsável por responder:
 
