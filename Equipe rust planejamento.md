@@ -1,8 +1,8 @@
-# 🦀 CyberSOC — Responsabilidades da Equipe Rust
+# 🦀 Sentinela — Responsabilidades da Equipe Rust
 
 ## 1. Visão geral
 
-O Rust será responsável pelo **Event Processing Engine** do CyberSOC.
+O Rust será responsável pelo **Event Processing Engine** do Sentinela.
 
 A função principal do Rust é ficar entre as fontes de eventos e o backend Java:
 
