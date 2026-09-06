@@ -1,5 +1,5 @@
+mod models;
 use axum::{routing::get, Router};
-
 #[tokio::main]
 async fn main() {
     let app = Router::new().route("/health", get(|| async { "OK" }));
