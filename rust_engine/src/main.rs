@@ -1,24 +1,16 @@
+mod api;
 mod models;
 
-use axum::{
-    http::StatusCode,
-    routing::{get, post},
-    Json, Router,
-};
-use models::security_event::SecurityEvent;
-
-async fn post_events(Json(event): Json<SecurityEvent>) -> StatusCode {
-    tracing::info!("Creating event: {}", event.id);
-    StatusCode::CREATED
-}
+use api::handlers::{events, health};
+use axum::{routing::{get, post}, Router};
 
 #[tokio::main]
 async fn main() {
     tracing_subscriber::fmt().init();
 
     let app = Router::new()
-        .route("/health", get(|| async { "OK" }))
-        .route("/events", post(post_events));
+        .route("/health", get(health::health))
+        .route("/events", post(events::post_events));
 
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000")
         .await
