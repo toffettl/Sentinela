@@ -15,9 +15,12 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/node": "22.20.2",
+    "@types/react": "19.3.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "6.0.3"
   },
   "packageManager": "yarn@1.22.22"
 }
