@@ -20,8 +20,8 @@ export default function DashboardPage() {
           <StatCard title={"Logs coletados"} value={312323}/>
         </div>
 
-        <div className="flex flex-row gap-2 w-full h-full">
-          
+        <div className="flex flex-row gap-2 w-full h-full min-h-100 min-w-200">
+
           <div>
             <InTimeEvent/>
           </div>
