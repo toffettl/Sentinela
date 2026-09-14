@@ -16,8 +16,6 @@ export default function Header() {
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
           Agente Online
         </div>
-
-        <div className="h-8 w-8 rounded-full bg-zinc-800" />
       </div>
     </header>
   );
