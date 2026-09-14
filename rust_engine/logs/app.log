@@ -1,0 +1,2 @@
+{"id":"550e8400-e29b-41d4-a716-446655440000","timestamp":"2026-09-11T23:50:00Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"192.168.1.10","asset":"test-api"}
+{"id":"550e8400-e29b-41d4-a716-446655440001","timestamp":"2026-09-11T23:51:00Z","event_type":"LOGIN_SUCCESS","source":"test-api","user":"felipe","ip":"192.168.1.10","asset":"test-api"}
