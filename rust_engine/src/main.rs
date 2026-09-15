@@ -11,6 +11,7 @@ use axum::{
 use tokio::sync::mpsc;
 
 use crate::collection::log_reader::read_logs;
+use crate::processing::correlation::CorrelationState;
 use crate::processing::event_processor::process_events;
 
 #[tokio::main]
@@ -23,7 +24,7 @@ async fn main() {
         read_logs("logs/app.log", tx).await.unwrap();
     });
 
-    tokio::spawn(process_events(rx));
+    tokio::spawn(process_events(rx, CorrelationState::new()));
 
     let app = Router::new()
         .route("/health", get(health::health))
