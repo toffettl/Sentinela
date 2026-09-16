@@ -1,87 +1,55 @@
-package com.sentinela.incident.entity;
+package com.sentinela.incident.dto;
 
 import com.sentinela.event.entity.Event;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
-import jakarta.persistence.Table;
+import com.sentinela.incident.entity.Incident;
+import com.sentinela.incident.entity.IncidentSeverity;
+import com.sentinela.incident.entity.IncidentStatus;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "incidents")
-public class Incident {
+public class IncidentResponse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String title;
-
-    @Column(columnDefinition = "TEXT")
     private String description;
-
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
     private IncidentSeverity severity;
-
-    @Column(name = "risk_score", nullable = false)
     private Integer riskScore;
-
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
     private IncidentStatus status;
-
-    @Column(name = "user_involved")
     private String userInvolved;
-
-    @Column(name = "ip_involved")
     private String ipInvolved;
-
-    @Column(name = "asset_involved")
     private String assetInvolved;
-
-    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
-
-    @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+    private List<EventSummary> events;
+    private List<IncidentNoteResponse> notes;
+    private List<String> rulesTriggered;
 
-    @ManyToMany
-    @JoinTable(
-        name = "incident_events",
-        joinColumns = @JoinColumn(name = "incident_id"),
-        inverseJoinColumns = @JoinColumn(name = "event_id")
-    )
-    private List<Event> events = new ArrayList<>();
+    public static IncidentResponse fromEntity(Incident incident) {
+        IncidentResponse response = new IncidentResponse();
+        response.setId(incident.getId());
+        response.setTitle(incident.getTitle());
+        response.setDescription(incident.getDescription());
+        response.setSeverity(incident.getSeverity());
+        response.setRiskScore(incident.getRiskScore());
+        response.setStatus(incident.getStatus());
+        response.setUserInvolved(incident.getUserInvolved());
+        response.setIpInvolved(incident.getIpInvolved());
+        response.setAssetInvolved(incident.getAssetInvolved());
+        response.setCreatedAt(incident.getCreatedAt());
+        response.setUpdatedAt(incident.getUpdatedAt());
+        response.setEvents(new ArrayList<>());
+        response.setNotes(new ArrayList<>());
+        response.setRulesTriggered(new ArrayList<>());
 
-    @OneToMany(mappedBy = "incident", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<IncidentNote> notes = new ArrayList<>();
-
-    @PrePersist
-    protected void onCreate() {
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
-        if (this.status == null) this.status = IncidentStatus.OPEN;
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        this.updatedAt = LocalDateTime.now();
+        if (incident.getEvents() != null) {
+            response.setEvents(incident.getEvents().stream().map(EventSummary::fromEntity).toList());
+        }
+        if (incident.getNotes() != null) {
+            response.setNotes(incident.getNotes().stream().map(IncidentNoteResponse::fromEntity).toList());
+        }
+        return response;
     }
 
     public Long getId() {
@@ -172,19 +140,27 @@ public class Incident {
         this.updatedAt = updatedAt;
     }
 
-    public List<Event> getEvents() {
+    public List<EventSummary> getEvents() {
         return events;
     }
 
-    public void setEvents(List<Event> events) {
+    public void setEvents(List<EventSummary> events) {
         this.events = events;
     }
 
-    public List<IncidentNote> getNotes() {
+    public List<IncidentNoteResponse> getNotes() {
         return notes;
     }
 
-    public void setNotes(List<IncidentNote> notes) {
+    public void setNotes(List<IncidentNoteResponse> notes) {
         this.notes = notes;
+    }
+
+    public List<String> getRulesTriggered() {
+        return rulesTriggered;
+    }
+
+    public void setRulesTriggered(List<String> rulesTriggered) {
+        this.rulesTriggered = rulesTriggered;
     }
 }
