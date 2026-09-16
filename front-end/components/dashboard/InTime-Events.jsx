@@ -36,8 +36,8 @@ const severidadeStyle = {
 
 export default function InTimeEvent() {
     return(
-        <div className="w-full h-full min-w-150 rounded-md bg-gray-800 border-r border-zinc-800">
-            <div className="w-full h-full">
+        <div className="w-full h-full min-w-120 rounded-md bg-gray-800 border-r border-zinc-800">
+            <div className="">
                 <div className="flex flex-row justify-between  p-4 border rounded-t-md border-gray-700">
                     <h1 className="text-white text-lg">Eventos Ao vivo</h1>
                     <span className={`inline w-2 h-2 bg-green-500 rounded-lg`}></span>

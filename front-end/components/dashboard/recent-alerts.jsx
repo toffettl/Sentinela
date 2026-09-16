@@ -50,7 +50,7 @@ const statusConfig = {
 
 export default function recentAlerts() {
     return(
-        <div className="w-full h-full min-w-180 rounded-md bg-gray-800 border-r border-zinc-800" >
+        <div className="w-full h-full rounded-md bg-gray-800 border-r border-zinc-800" >
             <div>
                 <div className="flex flex-row justify-between p-4 border rounded-t-md border-gray-700">
                 <h1 className="text-lg text-white">Incidentes recentes</h1>
@@ -73,7 +73,7 @@ export default function recentAlerts() {
                             {section.items.map((item) => (
                             <tr key={section.id} className="min-h-10 h-auto border border-gray-700">
                                 <td className="px-4 py-2 text-md text-white">#{section.id}</td>
-                                <td className="max-w-[150px] px-4 py-2 text-md text-white whitespace-normal break-words">{item.title}</td>
+                                <td className="max-w-32 px-4 py-2 text-md text-white whitespace-normal wrap-break-word">{item.title}</td>
                                 <td className="px-4 py-2 text-md text-white ">{item.ativo}</td>
                                 <td className="px-4 py-2 text-md">
                                     <span className={`px-4 py-2 rounded-full ${severidadeStyle[item.severidade]}`}>

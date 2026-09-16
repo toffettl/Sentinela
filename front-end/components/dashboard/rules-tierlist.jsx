@@ -24,7 +24,7 @@ export default function RulesTierList({data}) {
     };
 
      return (
-        <div className="w-full min-w-150 rounded-md bg-gray-800 border border-zinc-800">
+        <div className="w-full h-full rounded-md bg-gray-800 border border-zinc-800">
 
             <div className="flex justify-between p-4 border rounded-t-md border-gray-700">
                 <h1 className="text-white text-lg">
@@ -82,7 +82,7 @@ export default function RulesTierList({data}) {
                     );
                 })}
                         <span className="inline-block w-full h-2  rounded-lg bg-gray-900 border-gray-900"></span>
-                        <div className="flex flex-wrap items-center justify-between pt-4 border-t border-gray-700">
+                        <div className="flex flex-wrap  items-center justify-between pt-4 border-t border-gray-700">
                         {Object.entries(categoryTotals).map(([category, total]) => (
                             <div
                                 key={category}

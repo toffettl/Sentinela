@@ -61,7 +61,7 @@ export default function Sidebar() {
         ))}
           <span className="inline-block w-full h-1 rounded-lg bg-gray-700 border-gray-900"></span>
            <div className="space-y-1 flex m-2">
-                <span className="inline-block w-8 h-8 rounded-lg bg-gray-600 border-gray-900 text-white text-center text-sm mt-2">FL</span>
+                <span className="flex w-8 h-8 rounded-lg bg-gray-600 border-gray-900 text-white text-center justify-center items-center text-sm mt-2">FL</span>
                 <div className="items-center">
                 <a
                   href={"/configuracao"}

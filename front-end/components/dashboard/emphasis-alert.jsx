@@ -18,13 +18,13 @@ export default function empashisAlert ({score, data}) {
 };
 
     return(
-        <div className="w-full min-w-150 rounded-md bg-gray-800 border border-zinc-800">
+        <div className="w-full h-full rounded-md bg-gray-800 border border-zinc-800">
             <div className="flex justify-between p-4 border rounded-t-md border-gray-700">
                 <span className="text-white text-lg">Incidente em destaque</span>
                 <a href="/investigacao">Abrir Investigação →</a>
             </div>
 
-            <div className="flex flex-row gap-10 content-center-safe w-full h-full">
+            <div className="flex flex-row gap-2 content-center-safe w-full h-full">
                      <div
                         className="relative h-56 w-56 rounded-full m-6"
                         style={{
@@ -44,7 +44,7 @@ export default function empashisAlert ({score, data}) {
                             </span>
                         </div>
                     </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 p-2 bg-gray-900 rounded-lg m-2">
                         <div className="flex flex-col m-2 gap-2">
                             <h1 className="text-white text-lg">Possível comprometimento de conta</h1>
                             <div className="flex flex-row gap-2">
