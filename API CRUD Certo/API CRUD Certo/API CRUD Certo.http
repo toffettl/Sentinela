@@ -1,0 +1,6 @@
+@API_CRUD_Certo_HostAddress = http://localhost:5068
+
+GET {{API_CRUD_Certo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
