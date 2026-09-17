@@ -58,7 +58,7 @@ public class EventService {
         event.setIp(eventRequest.getIp());
         event.setSource(eventRequest.getSource());
         event.setTimestamp(eventRequest.getTimestamp());
-        event.setEventType(eventRequest.getEventType() != null ? eventRequest.getEventType() : EventType.NORMAL);
+        event.setEventType(eventRequest.getEventType());
         event.setUser(userRepository.findById(eventRequest.getUserId()).orElseThrow(() -> new RuntimeException("Usuário não encontrado")));
         event.setAsset(assetRepository.findById(eventRequest.getAssetId()).orElseThrow(() -> new RuntimeException("Ativo não encontrado")));
         return event;

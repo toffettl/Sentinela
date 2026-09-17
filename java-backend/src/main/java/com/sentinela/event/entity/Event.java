@@ -6,9 +6,10 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Timestamp;
+import java.time.Instant;
 
 @Entity
-@Table(name = "entity")
+@Table(name = "events")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,11 +20,11 @@ public class Event {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "event_type", nullable = false)
     private EventType eventType;
 
     @Column(nullable = false)
-    private Timestamp timestamp;
+    private Instant timestamp;
 
     @Column(nullable = false)
     private String source;
@@ -31,11 +32,11 @@ public class Event {
     @Column(nullable = false)
     private String ip;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "asset_id", nullable = false)
     private Asset asset;
 

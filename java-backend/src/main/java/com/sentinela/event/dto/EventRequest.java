@@ -4,10 +4,12 @@ import com.sentinela.asset.entity.Asset;
 import com.sentinela.event.entity.EventType;
 import com.sentinela.user.entity.User;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.time.Instant;
 
 @Getter
 @Setter
@@ -19,15 +21,15 @@ public class EventRequest {
     @NotBlank(message = "IP é obrigatório")
     private String ip;
 
-    @NotBlank(message = "EventType é obrigatório")
+    @NotNull(message = "EventType é obrigatório")
     private EventType eventType;
 
-    @NotBlank(message = "Timestamp é obrigatório")
-    private Timestamp timestamp;
+    @NotNull(message = "Timestamp é obrigatório")
+    private Instant timestamp;
 
-    @NotBlank(message = "AssetId é obrigatório")
+    @NotNull(message = "AssetId é obrigatório")
     private Long assetId;
 
-    @NotBlank(message = "UserId é obrigatório")
+    @NotNull(message = "UserId é obrigatório")
     private Long userId;
 }
