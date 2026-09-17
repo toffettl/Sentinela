@@ -6,6 +6,7 @@ pub enum PatternDetection {
     BruteForce {
         ip: String,
         event_count: usize,
+        event_ids: Vec<uuid::Uuid>,
     },
 }
 
@@ -14,17 +15,19 @@ pub fn detect_brute_force(
 ) -> Option<PatternDetection> {
     const BRUTE_FORCE_THRESHOLD: usize = 5;
 
-    let mut login_failed = events
+    let login_failed = events
         .iter()
         .filter(|event| event.event_type == "LOGIN_FAILED");
 
     let count = login_failed.clone().count();
-    let ip = login_failed.next().map(|event| event.ip.clone());
+    let ip = login_failed.clone().next().map(|event| event.ip.clone());
+    let event_ids = login_failed.map(|event| event.id).collect();
 
     match (ip, count >= BRUTE_FORCE_THRESHOLD) {
         (Some(ip), true) => Some(PatternDetection::BruteForce {
             ip,
             event_count: count,
+            event_ids,
         }),
         _ => None,
     }
