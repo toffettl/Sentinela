@@ -1,20 +1,15 @@
-2026-09-16 22:22:04.517 -03:00 [WRN] PRIVILEGED_ACCESS ip=::1 user=felipe
-2026-09-16 22:22:05.789 -03:00 [WRN] PRIVILEGED_ACCESS ip=::1 user=felipe
-2026-09-16 22:22:07.108 -03:00 [WRN] PRIVILEGED_ACCESS ip=::1 user=felipe
-2026-09-16 22:22:11.316 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:12.510 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:13.767 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:15.866 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:18.046 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:19.103 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:19.990 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:20.947 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:21.819 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
-2026-09-16 22:22:26.148 -03:00 [WRN] PRIVILEGED_ACCESS ip=::1 user=felipe
-2026-09-16 22:22:27.189 -03:00 [WRN] PRIVILEGED_ACCESS ip=::1 user=felipe
-2026-09-16 22:22:31.228 -03:00 [INF] LOGIN_SUCCESS ip=::1 user=felipe
-2026-09-16 22:22:32.456 -03:00 [INF] LOGIN_SUCCESS ip=::1 user=felipe
-2026-09-16 22:22:34.035 -03:00 [INF] LOGIN_SUCCESS ip=::1 user=felipe
-2026-09-16 23:00:51.231 -03:00 [INF] LOGIN_SUCCESS ip=::1 user=felipe
-2026-09-16 23:00:56.432 -03:00 [WRN] PRIVILEGED_ACCESS ip=::1 user=felipe
-2026-09-16 23:00:59.732 -03:00 [INF] DOWNLOAD_FILE ip=::1 user=felipe
+{"id":"80c95eb7-c01f-4591-a6f3-5edbbd431db0","timestamp":"2026-09-17T02:57:04.3371727Z","event_type":"LOGIN_SUCCESS","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"a0057d9e-536d-4294-bda8-45bf4013e7db","timestamp":"2026-09-17T02:57:13.9055674Z","event_type":"LOGIN_SUCCESS","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"21e8166f-3bf1-4d66-b705-ee100854352a","timestamp":"2026-09-17T02:57:20.3979975Z","event_type":"LOGIN_SUCCESS","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"007e1ccc-f9c0-4d93-8973-601a570a3560","timestamp":"2026-09-17T02:57:26.3804403Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"42b7557c-0cef-4d73-99ab-d0978f1b1507","timestamp":"2026-09-17T02:57:27.4997000Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"539187e0-0ff3-44b8-982e-4dfa53780f42","timestamp":"2026-09-17T02:57:28.4422212Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"840d19ef-a81a-431b-ac42-8c00dc3b55d5","timestamp":"2026-09-17T02:57:29.2885089Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"58f7c4c4-6d1e-4470-9688-010e63128680","timestamp":"2026-09-17T02:57:30.0521796Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"353f72d7-ab13-4b4e-a108-b50b7df311b7","timestamp":"2026-09-17T02:57:30.8423551Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"ece85ee3-adf8-4ced-865e-8f1b833a099e","timestamp":"2026-09-17T02:57:31.5371923Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"1e130f4b-4967-4b15-b8db-5230eac8459d","timestamp":"2026-09-17T02:57:32.3194268Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"414be9b2-db3f-4935-bb49-0294463d610c","timestamp":"2026-09-17T02:57:33.0207322Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"8cc408ad-65e2-471b-9615-52d3a1a6675c","timestamp":"2026-09-17T02:57:33.7005305Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"dd3e5988-a610-4c72-a340-8d01fff35fed","timestamp":"2026-09-17T02:57:34.3231553Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
+{"id":"227143b8-bcdb-4e29-a6fd-14272ef5fa54","timestamp":"2026-09-17T02:57:34.8494942Z","event_type":"LOGIN_FAILED","source":"test-api","user":"felipe","ip":"::1","asset":"test-api"}
