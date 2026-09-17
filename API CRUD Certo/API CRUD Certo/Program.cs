@@ -12,8 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
-        "logs/logs.log"    
-        )
+        "logs/logs.log",
+        outputTemplate: "{Message:lj}{NewLine}"
+    )
     .CreateLogger();
 
 var app = builder.Build();
