@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
-import { getDashboard } from "@/services/dashboard/dashboard.service";
+import { getEvents } from "@/services/events/events.service";
 
-export default function useDashboard() {
-  const [dashboard, setDashboard] = useState([]);
+export default function useEvents() {
+  const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function loadDashboard() {
+    async function loadEvents() {
       try {
         setLoading(true);
 
-        const data = await getDashboard();
+        const data = await getEvents();
 
-        setDashboard(data);
+        setEvents(data);
       } catch (error) {
         setError(error);
       } finally {
@@ -23,11 +23,11 @@ export default function useDashboard() {
       }
     }
 
-    loadDashboard();
+    loadEvents();
   }, []);
 
   return {
-    dashboard,
+    events,
     loading,
     error,
   };

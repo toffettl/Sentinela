@@ -1,10 +1,43 @@
+"use client"
+
 import StatCard from "@/components/dashboard/stat-card";
 import RecentAlerts from "@/components/dashboard/recent-alerts";
 import InTimeEvent from "@/components/dashboard/InTime-Events";
 import RulesTierList from "@/components/dashboard/rules-tierlist";
 import EmpashisAlert from "@/components/dashboard/emphasis-alert";
 
+import useEvents from "../../hooks/useEvents";
+import useIncidentEvents from "../../hooks/useIncidentsEvents";
+import useIncidents from "../../hooks/useIncidents";
+import useDashboard from "@/hooks/useDashboard";
+import { useMockDashboard } from "../../hooks/mocks/useMockDashboard";
+
+
 export default function DashboardPage() {
+   //const { events } = useEvents();
+  // const {incidents} = useIncidents();
+   //const { incidentsEvents } = useIncidentEvents();
+   //const {dashboardData} = useDashboard();
+
+   const {
+        dashboard,
+        loading,
+        error
+    } = useMockDashboard();
+
+    if (loading) {
+        return <p>Carregando dashboard...</p>;
+    }
+
+    if (error) {
+        return <p>Erro ao carregar dashboard.</p>;
+    }
+
+    if (!dashboard) {
+        return <p>Nenhum dado encontrado.</p>;
+    }
+
+
   return (
     <div className="flex flex-col gap-4 h-full w-full min-w-250 min-h-250">
       <h1 className="text-3xl font-bold">
@@ -16,10 +49,10 @@ export default function DashboardPage() {
       </p>
 
         <div className=" flex flex-row gap-4 w-full">
-          <StatCard title={"Requisições feitas"} value={21312412412}/>
-          <StatCard title={"IPs suspeitos"} value={2}/>
-          <StatCard title={"Anomalias possiveis"} value={6}/>
-          <StatCard title={"Logs coletados"} value={312323}/>
+          <StatCard title={"Requisições feitas"} value={dashboard.totalEvents + dashboard.totalIncidents}/>
+          <StatCard title={"IPs suspeitos"} value={dashboard.activeAssets}/>
+          <StatCard title={"Anomalias possiveis"} value={dashboard.criticalIncidents}/>
+          <StatCard title={"Logs coletados"} value={dashboard.highIncidents}/>
         </div>
 
         <div className="w-full h-full flex flex-row gap-4">
@@ -55,7 +88,7 @@ export default function DashboardPage() {
           ]}/>
 
         </div>
-        <div className="flex flex-row gap-2 w-full h-full min-h-100 min-w-200">
+        <div className="flex flex-row gap-2 w-full h-full min-h-100">
 
           <div>
             <InTimeEvent/>

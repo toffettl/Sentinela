@@ -52,14 +52,14 @@ export default function recentAlerts() {
     return(
         <div className="w-full h-full rounded-md bg-gray-800 border-r border-zinc-800" >
             <div>
-                <div className="flex flex-row justify-between p-4 border rounded-t-md border-gray-700">
+                <div className="flex justify-between p-4 border rounded-t-md border-gray-700">
                 <h1 className="text-lg text-white">Incidentes recentes</h1>
                 <a href="/alerts">Ver todos →</a>
                 </div>
                 <div>
                     <table className="w-full p-4 table-auto text-left">
                         <thead>
-                            <tr className="min-h-10 border border-gray-700">
+                            <tr className="min-h-10 border border-gray-700 w-full">
                                 <th className="px-4 py-2  text-sm text-zinc-400">ID </th>
                                 <th className="px-4 py-2  text-sm text-zinc-400" >Titulo</th>
                                 <th className="px-4 py-2  text-sm text-zinc-400">Ativo</th>

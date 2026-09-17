@@ -81,7 +81,7 @@ export default function RulesTierList({data}) {
                         </div>
                     );
                 })}
-                        <span className="inline-block w-full h-2  rounded-lg bg-gray-900 border-gray-900"></span>
+                        <span className="inline w-full h-2  rounded-lg bg-gray-900 border-gray-900"></span>
                         <div className="flex flex-wrap  items-center justify-between pt-4 border-t border-gray-700">
                         {Object.entries(categoryTotals).map(([category, total]) => (
                             <div

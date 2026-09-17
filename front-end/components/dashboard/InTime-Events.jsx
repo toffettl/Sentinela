@@ -36,17 +36,16 @@ const severidadeStyle = {
 
 export default function InTimeEvent() {
     return(
-        <div className="w-full h-full min-w-120 rounded-md bg-gray-800 border-r border-zinc-800">
-            <div className="">
-                <div className="flex flex-row justify-between  p-4 border rounded-t-md border-gray-700">
+        <div className="w-full h-full rounded-md bg-gray-800 border-r border-zinc-800">
+                <div className="flex justify-between  p-4 border rounded-t-md border-gray-700">
                     <h1 className="text-white text-lg">Eventos Ao vivo</h1>
                     <span className={`inline w-2 h-2 bg-green-500 rounded-lg`}></span>
                 </div>
                  {dados.map((section) => (
-                <div key={section.title} className="flex flex-row">
+                <div key={section.title} className="flex">
                     <ul className="h-full w-full">
                             {section.items.map(item => (
-                        <li key={section.title} className="flex flex-row border border-gray-700 pr-4 pl-4 px-3 py-2  justify-between">
+                        <li key={section.title} className="flex border border-gray-700 pr-4 pl-4 px-3 py-2 justify-between gap-4">
                                 <span className="text-sm text-zinc-400">
                                     {item.timeStamp}
                                 </span>
@@ -67,8 +66,6 @@ export default function InTimeEvent() {
                     </ul>
                 </div>
                  ))}
-            </div>
-
         </div>
     )
 }
