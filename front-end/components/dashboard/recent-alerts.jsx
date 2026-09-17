@@ -50,38 +50,38 @@ const statusConfig = {
 
 export default function recentAlerts() {
     return(
-        <div className="w-full h-full rounded-md bg-gray-800 border-r border-zinc-800" >
+        <div className="w-full h-full rounded-md bg-(--card) border-r border-(--border)" >
             <div>
-                <div className="flex justify-between p-4 border rounded-t-md border-gray-700">
-                <h1 className="text-lg text-white">Incidentes recentes</h1>
+                <div className="flex justify-between p-4 border rounded-t-md border-(--cardBord)">
+                <h1 className="text-lg text-foreground">Incidentes recentes</h1>
                 <a href="/alerts">Ver todos →</a>
                 </div>
                 <div>
                     <table className="w-full p-4 table-auto text-left">
                         <thead>
-                            <tr className="min-h-10 border border-gray-700 w-full">
-                                <th className="px-4 py-2  text-sm text-zinc-400">ID </th>
-                                <th className="px-4 py-2  text-sm text-zinc-400" >Titulo</th>
-                                <th className="px-4 py-2  text-sm text-zinc-400">Ativo</th>
-                                <th className="px-4 py-2  text-sm text-zinc-400">Severidade</th>
-                                <th className="px-4 py-2  text-sm text-zinc-400">Risco </th>
-                                <th className="px-4 py-2  text-sm text-zinc-400">Status </th>
+                            <tr className="min-h-10 border border-(--cardBord) w-full">
+                                <th className="px-4 py-2  text-sm text-(--muted)">ID </th>
+                                <th className="px-4 py-2  text-sm text-(--muted)" >Titulo</th>
+                                <th className="px-4 py-2  text-sm text-(--muted)">Ativo</th>
+                                <th className="px-4 py-2  text-sm text-(--muted)">Severidade</th>
+                                <th className="px-4 py-2  text-sm text-(--muted)">Risco </th>
+                                <th className="px-4 py-2  text-sm text-(--muted)">Status </th>
                             </tr>
                         </thead>
                     {dados.map((section) => (
                         <tbody key={section.id} className="h-full w-full ">
                             {section.items.map((item) => (
-                            <tr key={section.id} className="min-h-10 h-auto border border-gray-700">
-                                <td className="px-4 py-2 text-md text-white">#{section.id}</td>
-                                <td className="max-w-32 px-4 py-2 text-md text-white whitespace-normal wrap-break-word">{item.title}</td>
-                                <td className="px-4 py-2 text-md text-white ">{item.ativo}</td>
+                            <tr key={section.id} className="min-h-10 h-auto border border-(--cardBord)">
+                                <td className="px-4 py-2 text-md text-foreground">#{section.id}</td>
+                                <td className="max-w-32 px-4 py-2 text-md text-foreground whitespace-normal wrap-break-word">{item.title}</td>
+                                <td className="px-4 py-2 text-md text-foreground">{item.ativo}</td>
                                 <td className="px-4 py-2 text-md">
                                     <span className={`px-4 py-2 rounded-full ${severidadeStyle[item.severidade]}`}>
                                         {item.severidade}
                                         </span>
                                 </td>
-                                <td className="px-4 py-2  text-md text-white text-wrap">{item.risco}</td>
-                                <td className="px-4 py-2  text-md text-zinc-400 text-wrap">
+                                <td className="px-4 py-2  text-md text-foreground text-wrap">{item.risco}</td>
+                                <td className="px-4 py-2  text-md text-(--muted) text-wrap">
                                     <span className="flex items-center gap-2">
                                         <span className={`inline-block h-2 w-2 rounded-full ${
                                                     statusConfig[item.status]?.className

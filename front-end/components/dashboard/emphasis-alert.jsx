@@ -18,9 +18,9 @@ export default function empashisAlert ({score, data}) {
 };
 
     return(
-        <div className="w-full h-full rounded-md bg-gray-800 border border-zinc-800">
-            <div className="flex justify-between p-4 border rounded-t-md border-gray-700">
-                <span className="text-white text-lg">Incidente em destaque</span>
+        <div className="w-full h-full rounded-md bg-(--card) border border-(--border)">
+            <div className="flex justify-between p-4 border rounded-t-md border-(--cardBord)">
+                <span className="text-foreground text-lg">Incidente em destaque</span>
                 <a href="/investigacao">Abrir Investigação →</a>
             </div>
 
@@ -44,21 +44,21 @@ export default function empashisAlert ({score, data}) {
                             </span>
                         </div>
                     </div>
-                <div className="flex flex-col w-full gap-2 p-2 bg-gray-900 rounded-lg m-2">
+                <div className="flex flex-col w-full gap-2 p-2 bg-(--cardPanel) rounded-lg m-2">
                         <div className="flex flex-col m-2 gap-2">
-                            <h1 className="text-white text-lg">Possível comprometimento de conta</h1>
+                            <h1 className="text-foreground text-lg">Possível comprometimento de conta</h1>
                             <div className="flex flex-row gap-2">
                                 <div className="flex w-full gap-2">
-                                <span className="text-zinc-500 text-sm">Usuário</span>
-                                 <p className="text-white text-sm">felipe</p>
+                                <span className="text-(--muted) text-sm">Usuário</span>
+                                 <p className="text-foreground text-sm">felipe</p>
                                 </div>
                                 <div className="flex w-full gap-2">
-                                <span className="text-zinc-500 text-sm">IP</span>
-                                 <p className="text-white text-sm">192.150.1.50</p>
+                                <span className="text-(--muted) text-sm">IP</span>
+                                 <p className="text-foreground text-sm">192.150.1.50</p>
                                 </div>
                                 <div className="flex w-full gap-2">
-                                <span className="text-zinc-500 text-sm">Ativo</span>
-                                 <p className="text-white text-sm">Server-01</p>
+                                <span className="text-(--muted) text-sm">Ativo</span>
+                                 <p className="text-foreground text-sm">Server-01</p>
                                 </div>
                             </div>
                         </div>
@@ -68,25 +68,25 @@ export default function empashisAlert ({score, data}) {
                                     <span className={`inline-block h-2 w-2 rounded-full ${
                                                     statusConfig["CRITICAL"]?.className
                                                 }`}> </span>
-                                    <span className="text-gray-300 text-md">  Brute force - 5 tentivas em 14s</span>
+                                    <span className="text-(--muted) text-md">  Brute force - 5 tentivas em 14s</span>
                                 </li>
                                 <li className="py-2 px-3 ">
                                     <span className={`inline-block h-2 w-2 rounded-full ${
                                                     statusConfig["CRITICAL"]?.className
                                                 }`}></span>
-                                    <span className="text-gray-300 text-md">  Brute force - 5 tentivas em 14s</span>
+                                    <span className="text-(--muted) text-md">  Brute force - 5 tentivas em 14s</span>
                                 </li>
                                 <li className="py-2 px-3 ">
                                     <span className={`inline-block h-2 w-2 rounded-full ${
                                                     statusConfig["CRITICAL"]?.className
                                                 }`}></span>
-                                    <span className="text-gray-300 text-md">  Brute force - 5 tentivas em 14s</span>
+                                    <span className="text-(--muted) text-md">  Brute force - 5 tentivas em 14s</span>
                                 </li>
                                 <li className="py-2 px-3">
                                     <span className={`inline-block h-2 w-2 rounded-full ${
                                                     statusConfig["CRITICAL"]?.className
                                                 }`}></span>
-                                    <span className="text-gray-300 text-md">  Brute force - 5 tentivas em 14s</span>
+                                    <span className="text-(--muted) text-md">  Brute force - 5 tentivas em 14s</span>
                                 </li>
                             </ul>
                         </div>

@@ -33,7 +33,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/(dashboard)/servers/page.jsx"  ],
   "exclude": [
     "node_modules"
   ],

@@ -44,7 +44,7 @@ export default function DashboardPage() {
         Painel de Segurança
       </h1>
 
-      <p className="mt-2 text-zinc-400">
+      <p className="mt-2 text-muted">
         Sentinela Monitores de segurança
       </p>
 

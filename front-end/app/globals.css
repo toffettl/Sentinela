@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
-:root {
+:root { 
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #18181b; 
+  --card: #bfbfe6; 
+  --cardPanel:#c4d8ff;
+  --cardBord:#101318;
+  --border: #181818; 
+  --muted: #202020; 
+  --notSelectButtonBg: #3f3f46;
+  --notSelectBallButton:#9f9fa9;
+  --selectButtonBg: #000000;
+  --selectBallButton:#faf9f9;
 }
 
 @theme inline {
@@ -12,15 +21,43 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.dark { 
+  --background: #09090b; 
+  --foreground: #ffffff; 
+  --card: #1e2939; 
+  --cardPanel:#101828;
+  --cardBord:#364153;
+  --border: #27272a; 
+  --muted: #9f9fa9; 
+  --notSelectButtonBg: #3f3f46;
+  --notSelectBallButton:#9f9fa9;
+  --selectButtonBg: #ffffff;
+  --selectBallButton:#000000;
+}
+
+.high-contrast { 
+  --background: #000000; 
+  --foreground: #ffffff; 
+  --card: #000000; 
+  --border: #ffffff; 
+  --muted: #ffffff; 
+}
+
+.large-text { 
+  font-size: 18px; 
+}
+
+
+.reduce-motion *, 
+.reduce-motion *::before, 
+.reduce-motion *::after { 
+  animation-duration: 0.01ms !important; 
+  animation-iteration-count: 1 !important; 
+  transition-duration: 0.01ms !important; 
+  scroll-behavior: auto !important; }

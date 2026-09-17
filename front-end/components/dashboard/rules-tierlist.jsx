@@ -24,14 +24,14 @@ export default function RulesTierList({data}) {
     };
 
      return (
-        <div className="w-full h-full rounded-md bg-gray-800 border border-zinc-800">
+        <div className="w-full h-full rounded-md bg-(--card) border border-(--border)">
 
-            <div className="flex justify-between p-4 border rounded-t-md border-gray-700">
-                <h1 className="text-white text-lg">
+            <div className="flex justify-between p-4 border rounded-t-md border-(--cardBord)">
+                <h1 className="text-foreground text-lg">
                     Regras mais acionadas
                 </h1>
 
-                <span className="text-sm text-zinc-400">
+                <span className="text-sm text-(--muted)">
                     Últimas 24h
                 </span>
             </div>
@@ -54,22 +54,22 @@ export default function RulesTierList({data}) {
                                         className={`h-2 w-2 rounded-full ${item.color}`}
                                     />
 
-                                    <span className="text-sm text-zinc-300">
+                                    <span className="text-sm text-foreground">
                                         {item.rule}
                                     </span>
 
-                                    <span className="text-xs text-zinc-500">
+                                    <span className="text-xs text-(--muted)">
                                         ({item.name})
                                     </span>
                                 </div>
 
-                                <span className="text-sm text-zinc-400">
+                                <span className="text-sm text-(--muted)">
                                     {item.value}
                                 </span>
 
                             </div>
 
-                            <div className="w-full h-2 bg-gray-700 rounded-full">
+                            <div className="w-full h-2 bg-(--cardBord) rounded-full">
                                 <div
                                     className={`h-2 rounded-full ${item.color}`}
                                     style={{
@@ -82,7 +82,7 @@ export default function RulesTierList({data}) {
                     );
                 })}
                         <span className="inline w-full h-2  rounded-lg bg-gray-900 border-gray-900"></span>
-                        <div className="flex flex-wrap  items-center justify-between pt-4 border-t border-gray-700">
+                        <div className="flex flex-wrap  items-center justify-between pt-4 border-t border-(--cardBord)">
                         {Object.entries(categoryTotals).map(([category, total]) => (
                             <div
                                 key={category}
@@ -92,17 +92,17 @@ export default function RulesTierList({data}) {
                                     className={`h-2 w-2 rounded-full ${categoryConfig[category]?.color}`}
                                 />
 
-                                <span className="text-sm text-zinc-400">
+                                <span className="text-sm text-(--muted)">
                                     {category}
                                 </span>
 
-                                <span className="text-sm text-white font-medium">
+                                <span className="text-sm text-foreground font-medium">
                                     {total}
                                 </span>
                             </div>
                         ))}
                     </div>
-                
+
             </div>
 
         </div>
