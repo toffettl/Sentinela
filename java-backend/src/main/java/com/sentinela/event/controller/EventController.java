@@ -2,13 +2,10 @@ package com.sentinela.event.controller;
 
 import com.sentinela.event.dto.EventRequest;
 import com.sentinela.event.dto.EventResponse;
-import com.sentinela.event.entity.Event;
-import com.sentinela.event.repository.EventRepository;
 import com.sentinela.event.service.EventService;
+import com.sentinela.rust.RustEventRequest;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.service.annotation.HttpExchange;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -34,6 +31,11 @@ public class EventController {
     @PostMapping
     private EventResponse save(@RequestBody EventRequest eventRequest) {
         return eventService.save(eventRequest);
+    }
+
+    @PostMapping("/from-rust")
+    private EventResponse saveFromRust(@RequestBody RustEventRequest rustEventRequest) {
+        return eventService.saveFromRust(rustEventRequest);
     }
 
     @DeleteMapping

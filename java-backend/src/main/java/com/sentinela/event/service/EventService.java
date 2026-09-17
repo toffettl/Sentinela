@@ -7,6 +7,7 @@ import com.sentinela.event.entity.Event;
 import com.sentinela.event.entity.EventType;
 import com.sentinela.event.repository.EventRepository;
 import com.sentinela.exception.ResourceNotFoundException;
+import com.sentinela.rust.RustEventRequest;
 import com.sentinela.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +40,28 @@ public class EventService {
         Event event = eventRequestToEvent(eventRequest);
         repository.save(event);
         return EventResponse.fromEntity(event);
+    }
+
+    public EventResponse saveFromRust(RustEventRequest rustEventRequest) {
+        Event event = new Event();
+        event.setIp(rustEventRequest.ip());
+        event.setSource(rustEventRequest.source());
+        event.setTimestamp(rustEventRequest.timestamp());
+        event.setEventType(eventTypeFromRust(rustEventRequest.eventType()));
+        event.setUser(userRepository.findByEmail(rustEventRequest.user())
+                .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado")));
+        event.setAsset(assetRepository.findByName(rustEventRequest.asset())
+                .or(() -> assetRepository.findByHostname(rustEventRequest.asset()))
+                .orElseThrow(() -> new ResourceNotFoundException("Ativo não encontrado")));
+
+        return EventResponse.fromEntity(repository.save(event));
+    }
+
+    private EventType eventTypeFromRust(String eventType) {
+        if ("LOGIN_SUCCESS".equals(eventType)) {
+            return EventType.LOGIN_SUCESS;
+        }
+        return EventType.valueOf(eventType);
     }
 
     public EventResponse delete(EventRequest eventRequest) {
