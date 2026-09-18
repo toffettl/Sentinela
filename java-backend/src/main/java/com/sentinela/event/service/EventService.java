@@ -38,6 +38,7 @@ public class EventService {
 
     public EventResponse save(EventRequest eventRequest) {
         Event event = eventRequestToEvent(eventRequest);
+        // TODO: Adicionar lógica de transformar os dados do usuário e servidor vindos da API-KEY e transformar como objeto para os campos user e asset.
         repository.save(event);
         return EventResponse.fromEntity(event);
     }

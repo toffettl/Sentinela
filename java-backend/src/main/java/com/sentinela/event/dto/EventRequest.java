@@ -3,6 +3,7 @@ package com.sentinela.event.dto;
 import com.sentinela.asset.entity.Asset;
 import com.sentinela.event.entity.EventType;
 import com.sentinela.user.entity.User;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -10,10 +11,14 @@ import lombok.Setter;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 public class EventRequest {
+
+    @Id
+    private Long id;
 
     @NotBlank(message = "Source é obrigatório")
     private String source;
@@ -25,7 +30,7 @@ public class EventRequest {
     private EventType eventType;
 
     @NotNull(message = "Timestamp é obrigatório")
-    private Instant timestamp;
+    private LocalDateTime timestamp;
 
     @NotNull(message = "AssetId é obrigatório")
     private Long assetId;

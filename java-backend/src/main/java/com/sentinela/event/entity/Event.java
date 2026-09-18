@@ -7,6 +7,7 @@ import lombok.*;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "events")
@@ -16,7 +17,6 @@ import java.time.Instant;
 public class Event {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Enumerated(EnumType.STRING)
@@ -24,7 +24,7 @@ public class Event {
     private EventType eventType;
 
     @Column(nullable = false)
-    private Instant timestamp;
+    private LocalDateTime timestamp;
 
     @Column(nullable = false)
     private String source;

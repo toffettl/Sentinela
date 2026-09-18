@@ -16,7 +16,7 @@ public class EventResponse {
 
     private Long id;
     private EventType eventType;
-    private Instant timestamp;
+    private LocalDateTime timestamp;
     private String source;
     private String ip;
     private Long assetId;

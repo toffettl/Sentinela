@@ -1,16 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="72d8b4f1-b736-4187-9fd8-b8fe5355dd72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_11_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_database_postgresql_11_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/rule/engine/RuleEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/sentinela.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/sentinela.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/dto/EventRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/dto/EventRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/dto/EventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/dto/EventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/entity/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/entity/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/service/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/incident/dto/EventSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/incident/dto/EventSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/incident/service/IncidentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/incident/service/IncidentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/rust/RustEventRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/rust/RustEventRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/SentinelaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/SentinelaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/controller/AssetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/controller/AssetController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/dto/AssetRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/dto/AssetRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/dto/AssetResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/dto/AssetResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/entity/Asset.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/entity/Asset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/entity/AssetStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/entity/AssetStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/repository/AssetRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/repository/AssetRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/service/AssetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/asset/service/AssetService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/exception/BusinessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/exception/BusinessException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/exception/ResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/entity/Incident.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/entity/Incident.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/entity/IncidentSeverity.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/entity/IncidentSeverity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/entity/IncidentStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/entity/IncidentStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/repository/IncidentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/incident/repository/IncidentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/dto/UserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/dto/UserRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/dto/UserResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/dto/UserResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/entity/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/entity/UserRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/com/sentinela/user/service/UserService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3JTBxCIlJVAxiQFiao0jv6QZd19" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Sentinela.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "java-backend",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="Sentinela" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.sentinela.SentinelaApplication" />
       <module name="sentinela" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="sentinela" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72d8b4f1-b736-4187-9fd8-b8fe5355dd72" name="Changes" comment="" />
+      <created>1789675436638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789675436638</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
