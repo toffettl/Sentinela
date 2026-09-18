@@ -2,12 +2,10 @@ package com.sentinela.event.dto;
 
 import com.sentinela.event.entity.Event;
 import com.sentinela.event.entity.EventType;
-import com.sentinela.user.entity.User;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Timestamp;
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Getter
@@ -15,12 +13,14 @@ import java.time.LocalDateTime;
 public class EventResponse {
 
     private Long id;
+
+    @JsonProperty("event_type")
     private EventType eventType;
     private LocalDateTime timestamp;
     private String source;
+    private String user;
     private String ip;
-    private Long assetId;
-    private Long userId;
+    private String asset;
 
     public static EventResponse fromEntity(Event event) {
         EventResponse response = new EventResponse();
@@ -28,9 +28,9 @@ public class EventResponse {
         response.setEventType(event.getEventType());
         response.setTimestamp(event.getTimestamp());
         response.setSource(event.getSource());
+        response.setUser(event.getUser().getName());
         response.setIp(event.getIp());
-        response.setAssetId(event.getAsset().getId() != null ? event.getAsset().getId() : null);
-        response.setUserId(event.getUser().getId() != null ? event.getUser().getId() : null);
+        response.setAsset(event.getAsset().getName());
         return response;
     }
 }

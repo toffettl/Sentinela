@@ -1,6 +1,7 @@
 package com.sentinela.event.dto;
 
 import com.sentinela.asset.entity.Asset;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sentinela.event.entity.EventType;
 import com.sentinela.user.entity.User;
 import jakarta.persistence.Id;
@@ -26,15 +27,18 @@ public class EventRequest {
     @NotBlank(message = "IP é obrigatório")
     private String ip;
 
+    private String user;
+
+    private String asset;
+
     @NotNull(message = "EventType é obrigatório")
+    @JsonProperty("event_type")
     private EventType eventType;
 
     @NotNull(message = "Timestamp é obrigatório")
     private LocalDateTime timestamp;
 
-    @NotNull(message = "AssetId é obrigatório")
     private Long assetId;
 
-    @NotNull(message = "UserId é obrigatório")
     private Long userId;
 }

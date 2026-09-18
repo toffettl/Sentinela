@@ -1,5 +1,6 @@
 package com.sentinela.event.service;
 
+import com.sentinela.asset.entity.Asset;
 import com.sentinela.asset.repository.AssetRepository;
 import com.sentinela.event.dto.EventRequest;
 import com.sentinela.event.dto.EventResponse;
@@ -8,6 +9,7 @@ import com.sentinela.event.entity.EventType;
 import com.sentinela.event.repository.EventRepository;
 import com.sentinela.exception.ResourceNotFoundException;
 import com.sentinela.rust.RustEventRequest;
+import com.sentinela.user.entity.User;
 import com.sentinela.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -83,9 +85,28 @@ public class EventService {
         event.setSource(eventRequest.getSource());
         event.setTimestamp(eventRequest.getTimestamp());
         event.setEventType(eventRequest.getEventType());
-        event.setUser(userRepository.findById(eventRequest.getUserId()).orElseThrow(() -> new RuntimeException("Usuário não encontrado")));
-        event.setAsset(assetRepository.findById(eventRequest.getAssetId()).orElseThrow(() -> new RuntimeException("Ativo não encontrado")));
+        event.setUser(resolveUser(eventRequest));
+        event.setAsset(resolveAsset(eventRequest));
         return event;
+    }
+
+    private User resolveUser(EventRequest eventRequest) {
+        if (eventRequest.getUserId() != null) {
+            return userRepository.findById(eventRequest.getUserId())
+                    .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+        }
+        return userRepository.findByEmail(eventRequest.getUser())
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+    }
+
+    private Asset resolveAsset(EventRequest eventRequest) {
+        if (eventRequest.getAssetId() != null) {
+            return assetRepository.findById(eventRequest.getAssetId())
+                    .orElseThrow(() -> new RuntimeException("Ativo não encontrado"));
+        }
+        return assetRepository.findByName(eventRequest.getAsset())
+                .or(() -> assetRepository.findByHostname(eventRequest.getAsset()))
+                .orElseThrow(() -> new RuntimeException("Ativo não encontrado"));
     }
 
 

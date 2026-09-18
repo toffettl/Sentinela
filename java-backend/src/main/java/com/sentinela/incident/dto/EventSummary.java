@@ -16,9 +16,9 @@ public class EventSummary {
     public static EventSummary fromEntity(Event event) {
         EventSummary summary = new EventSummary();
         summary.setId(event.getId());
-        summary.setEventType(event.getEventType());
+        summary.setEventType(event.getEventType().name());
         summary.setTimestamp(event.getTimestamp());
-        summary.setUser(event.getUser());
+        summary.setUser(event.getUser().getName());
         summary.setIp(event.getIp());
         summary.setSource(event.getSource());
         return summary;
