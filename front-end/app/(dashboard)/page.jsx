@@ -57,7 +57,7 @@ export default function DashboardPage() {
 
         <div className="w-full h-full flex flex-row gap-4">
 
-          <EmpashisAlert score={95}/>
+          <EmpashisAlert score={50}/>
 
           <RulesTierList
           data={[
