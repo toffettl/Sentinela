@@ -27,4 +27,12 @@ public class SecurityRule {
 
     @Column(name = "risk_points", nullable = false)
     private int riskPoints;
+
+    public RuleType getRuleType() {
+        return ruleType;
+    }
+
+    public int getRiskPoints() {
+        return riskPoints;
+    }
 }
