@@ -81,6 +81,7 @@ public class EventService {
 
     public Event eventRequestToEvent(EventRequest eventRequest) {
         Event event = new Event();
+        event.setId(eventRequest.getId());
         event.setIp(eventRequest.getIp());
         event.setSource(eventRequest.getSource());
         event.setTimestamp(eventRequest.getTimestamp());

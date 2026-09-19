@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="72d8b4f1-b736-4187-9fd8-b8fe5355dd72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/detection/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/detection/service/DetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/rule/engine/RuleEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/rule/engine/RuleEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/securityrule/entity/SecurityRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/securityrule/entity/SecurityRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/src/main/java/com/sentinela/event/service/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/java-backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

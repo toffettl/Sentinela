@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/sentinela
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://sentinela-db-nexus-gaming.l.aivencloud.com:21349/defaultdb?sslmode=require
+    username: avnadmin
+    password: AVNS_a-Mik1Nd0Et46eNcU-R
   jpa:
     hibernate:
       ddl-auto: update
